@@ -4,9 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 @Entity
-public class Person {
+public class PanCard {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -14,8 +13,6 @@ public class Person {
 	private String name;
 	private String address;
 	private long phone;
-	@OneToOne
-	private PanCard panCard;
 	public int getId() {
 		return id;
 	}
@@ -40,11 +37,6 @@ public class Person {
 	public void setPhone(long phone) {
 		this.phone = phone;
 	}
-	public PanCard getPanCard() {
-		return panCard;
-	}
-	public void setPanCard(PanCard panCard) {
-		this.panCard = panCard;
-	}
+	
 	
 }
